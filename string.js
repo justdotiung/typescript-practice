@@ -1,3 +1,4 @@
+"use strict";
 var myName = "Makr";
 var fullName = "Mark Lee";
 var age = 39;
