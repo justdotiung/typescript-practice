@@ -1,15 +1,27 @@
-interface Person1 {
-  name: string;
-  age: number;
+//optional property
+interface Person2 {
+    name: string
+    age?: number
+    [index: string]: any
 }
 
-function hello1(person: Person1): void {
-  console.log(`안녕하세요 ! ${person.name} 입니다.`);
+function hello2(person: Person2): void {
+    console.log(`안녕하세요 ! ${person.name} 입니다.`)
 }
 
-const p1: Person1 = {
-  name: "Mark",
-  age: 39,
-};
+const p21: Person2 = {
+    name: 'Mark',
+}
+const p22: Person2 = {
+    name: 'potor',
+    age: 23,
+    sister: ['Anna', 'Kym'],
+}
+const p23: Person2 = {
+    name: 'potor',
+    age: 44,
+    mather: p22,
+    father: p21,
+}
 
-hello1(p1);
+hello2(p21)
