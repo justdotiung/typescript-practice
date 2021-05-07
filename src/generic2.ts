@@ -5,9 +5,7 @@ const helloFunction: HelloFunctionGeneric1 = (message) => {
 };
 
 interface HelloFunctionGeneric2 {
-  hello: <T>(message: T) => T;
+  <T>(message: T): T;
 }
 
-const helloFunction2: HelloFunctionGeneric2 = {
-  hello: (message) => message,
-};
+const helloFunction2: HelloFunctionGeneric2 = (message) => message;
